@@ -1,0 +1,28 @@
+[package]
+name = "sirene-index"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme.workspace = true
+description = "Compact binary search index combining FSTs, Roaring Bitmaps, and memory-mapped persistence for sirene-rs."
+
+[dependencies]
+sirene-core.workspace = true
+sirene-normalize.workspace = true
+sirene-matcher.workspace = true
+fst.workspace = true
+roaring.workspace = true
+smallvec.workspace = true
+byteorder.workspace = true
+thiserror.workspace = true
+serde = { workspace = true, optional = true }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+memmap2.workspace = true
+
+[features]
+default = ["serde"]
+serde = ["dep:serde", "roaring/serde"]

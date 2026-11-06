@@ -1,0 +1,29 @@
+[package]
+name = "sirene-wasm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme.workspace = true
+description = "WebAssembly bindings and client-side in-memory search engine for sirene-rs."
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+sirene-core.workspace = true
+sirene-normalize.workspace = true
+sirene-matcher.workspace = true
+sirene-index.workspace = true
+
+wasm-bindgen.workspace = true
+serde-wasm-bindgen.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+smallvec.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+wasm-bindgen-test.workspace = true

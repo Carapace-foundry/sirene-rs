@@ -1,0 +1,21 @@
+[package]
+name = "sirene-matcher"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme.workspace = true
+description = "Fuzzy distance metrics (Jaro-Winkler, Damerau), trigram Jaccard, and multi-criteria scoring engine for sirene-rs."
+
+[dependencies]
+sirene-core.workspace = true
+sirene-normalize.workspace = true
+smallvec.workspace = true
+thiserror.workspace = true
+serde = { workspace = true, optional = true }
+
+[features]
+default = ["serde"]
+serde = ["dep:serde", "sirene-core/serde", "sirene-normalize/serde", "smallvec/serde"]

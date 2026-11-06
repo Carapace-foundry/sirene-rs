@@ -1,0 +1,16 @@
+site_name: sirene-rs
+site_description: High-performance French SIRENE / RNE corporate entity matching and fuzzy search engine in pure Rust and WebAssembly.
+repo_url: https://github.com/carapace-foundry/sirene-rs
+theme: readthedocs
+
+nav:
+  - Overview: index.md
+  - Installation: install.md
+  - Quickstart Tutorial: tutorial.md
+  - Architecture & Storage: architecture.md
+  - Data Ingestion: ingest.md
+  - Matching & Scoring: matching.md
+  - HTTP REST API: api.md
+  - CLI Reference: cli.md
+  - WebAssembly (WASM): wasm.md
+  - FAQ: faq.md

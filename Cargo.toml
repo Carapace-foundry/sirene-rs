@@ -1,0 +1,46 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sirene-core",
+    "crates/sirene-normalize",
+    "crates/sirene-index",
+    "crates/sirene-matcher",
+    "crates/sirene-cli",
+    "crates/sirene-wasm",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Carapace Contributors"]
+license = "MIT OR Apache-2.0"
+rust-version = "1.80"
+repository = "https://github.com/carapace-foundry/sirene-rs"
+readme = "README.md"
+description = "High-performance French SIRENE / RNE corporate entity matching and fuzzy search engine in pure Rust and WebAssembly."
+keywords = ["sirene", "siren", "siret", "fuzzy-search", "record-linkage"]
+categories = ["command-line-utilities", "database-implementations", "text-processing"]
+
+[workspace.dependencies]
+sirene-core = { path = "crates/sirene-core" }
+sirene-normalize = { path = "crates/sirene-normalize" }
+sirene-matcher = { path = "crates/sirene-matcher" }
+sirene-index = { path = "crates/sirene-index" }
+
+thiserror = "2.0"
+serde = { version = "1.0", features = ["derive", "std"] }
+serde_json = "1.0"
+smallvec = { version = "1.13", features = ["serde"] }
+unicode-normalization = "0.1"
+fst = "0.4.7"
+roaring = { version = "0.12", features = ["serde"] }
+memmap2 = "0.9"
+byteorder = "1.5"
+csv = "1.4"
+clap = { version = "4.6", features = ["derive"] }
+flate2 = "1.1"
+zip = { version = "9.3", default-features = false, features = ["deflate-flate2"] }
+tempfile = "3.17"
+wasm-bindgen = "0.2"
+serde-wasm-bindgen = "0.6"
+wasm-bindgen-test = "0.3"

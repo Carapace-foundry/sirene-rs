@@ -1,0 +1,14 @@
+target/
+.git/
+.github/
+docs/
+data/
+*.idx
+*.bin
+*.fst
+*.csv
+*.csv.gz
+*.tar.gz
+*.zip
+*.ndjson
+pkg/

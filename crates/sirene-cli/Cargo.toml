@@ -1,0 +1,39 @@
+[package]
+name = "sirene-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme.workspace = true
+description = "Command-line interface, streaming ingestion, HTTP microservice, and batch matcher for sirene-rs."
+
+[lib]
+name = "sirene_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sirene"
+path = "src/main.rs"
+
+[[bin]]
+name = "benchmark"
+path = "src/bin/benchmark.rs"
+
+[dependencies]
+sirene-core.workspace = true
+sirene-normalize.workspace = true
+sirene-matcher.workspace = true
+sirene-index.workspace = true
+
+clap.workspace = true
+csv.workspace = true
+flate2.workspace = true
+zip.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

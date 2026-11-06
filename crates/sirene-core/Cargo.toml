@@ -1,0 +1,22 @@
+[package]
+name = "sirene-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme.workspace = true
+description = "Core domain types, SIREN/SIRET Luhn validation, COG commune codes, and NAF nomenclatures for sirene-rs."
+
+[dependencies]
+thiserror.workspace = true
+serde = { workspace = true, optional = true }
+
+[features]
+default = ["serde"]
+serde = ["dep:serde"]
+
+[dev-dependencies]
+serde_json.workspace = true
+

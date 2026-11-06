@@ -1,0 +1,43 @@
+# Rust / Cargo
+/target/
+**/*.rs.bk
+
+# Large SIRENE / RNE datasets & archives (keep sample test fixtures)
+/data/*
+!/data/sample_stock_unite_legale.csv
+!/data/sample_stock_unite_legale.csv.gz
+!/data/.gitkeep
+*.csv
+!/data/sample_stock_unite_legale.csv
+*.csv.gz
+!/data/sample_stock_unite_legale.csv.gz
+*.tar.gz
+*.zip
+*.ndjson
+
+# Inverted index binary files & mmap tables
+*.idx
+*.bin
+*.fst
+/sirene.idx
+/test_index*
+/index_data/
+
+# WebAssembly build outputs
+/pkg/
+/crates/sirene-wasm/pkg/
+
+# Logs & environment
+*.log
+.env
+.env.*
+!.env.example
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

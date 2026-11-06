@@ -1,0 +1,22 @@
+[package]
+name = "sirene-normalize"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+readme.workspace = true
+description = "Fast text normalizer, Unicode diacritics stripping, and French legal form cleaner for sirene-rs."
+
+[dependencies]
+sirene-core.workspace = true
+smallvec.workspace = true
+thiserror.workspace = true
+serde = { workspace = true, optional = true }
+unicode-normalization.workspace = true
+
+[features]
+default = ["serde"]
+serde = ["dep:serde", "smallvec/serde"]
+
